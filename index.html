@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/output.css">
+  <title>LuxBite Restaurant</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lightBg: '#FFF8F0',
+            primary: '#D97706',
+            secondary: '#92400E',
+            darkBg: '#0F172A',
+            darkPrimary: '#F59E0B',
+            darkSecondary: '#FBBF24'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-lightBg dark:bg-darkBg text-gray-800 dark:text-white transition-all duration-500">
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader"></div>
+</div>
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/30 dark:bg-slate-900/30 border-b border-white/20">
+  <nav class="container mx-auto flex justify-between items-center p-5">
+
+    <h1 class="text-3xl font-bold text-primary dark:text-darkPrimary">
+      LuxBite
+    </h1>
+
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li><a href="index.html" class="hover:text-primary">Home</a></li>
+      <li><a href="page/menu.html" class="hover:text-primary">Menu</a></li>
+      <li><a href="page/about.html" class="hover:text-primary">About</a></li>
+      <li><a href="page/reservation.html" class="hover:text-primary">Reservation</a></li>
+      <li><a href="page/contact.html" class="hover:text-primary">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle"
+      class="bg-primary dark:bg-darkPrimary text-white px-4 py-2 rounded-full">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+
+  <img
+    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    class="absolute w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative text-center text-white px-6">
+
+    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+      Luxury Dining Experience
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-lg mb-8">
+      Discover premium taste crafted by world-class chefs.
+    </p>
+
+    <a href="/page/reservation.html"
+      class="bg-primary hover:bg-secondary px-8 py-4 rounded-full text-lg transition duration-300 shadow-xl">
+      Reserve Table
+    </a>
+
+  </div>
+
+</section>
+
+<!-- Featured Dishes -->
+<section class="py-24 container mx-auto px-6">
+
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold mb-4">Featured Dishes</h2>
+    <p class="text-gray-600 dark:text-gray-300">
+      Signature dishes loved by our customers.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    <!-- Card -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-500">
+
+      <img
+        src="https://images.unsplash.com/photo-1544025162-d76694265947"
+        class="h-72 w-full object-cover"
+      />
+
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-2xl font-semibold">Grilled Steak</h3>
+          <span class="text-primary font-bold">$28</span>
+        </div>
+
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Premium grilled steak with special herbs and sauce.
+        </p>
+
+        <button class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl transition">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Repeat -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-500">
+
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/5035aaf024ac8e905e7ced3e/7771fb42-1595-4bef-86a1-98905489b144/Bitcoin+Foie+Gras+Cheeseburger+%2814%29.jpg?format=1500w"
+        class="h-72 w-full object-cover"
+      />
+
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-2xl font-semibold">Luxury Burger</h3>
+          <span class="text-primary font-bold">$18</span>
+        </div>
+
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Juicy burger with melted cheese and crispy fries.
+        </p>
+
+        <button class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl transition">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+
+    <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-3 transition duration-500">
+
+      <img
+        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+        class="h-72 w-full object-cover"
+      />
+
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-2xl font-semibold">Italian Pizza</h3>
+          <span class="text-primary font-bold">$22</span>
+        </div>
+
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Authentic Italian pizza baked with fresh ingredients.
+        </p>
+
+        <button class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl transition">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Reservation Banner -->
+<section class="py-20 bg-primary text-white text-center">
+
+  <h2 class="text-5xl font-bold mb-6">
+    Book Your Table Today
+  </h2>
+
+  <p class="mb-8 text-lg">
+    Enjoy unforgettable dining moments with us.
+  </p>
+
+  <a href="page/reservation.html"
+    class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
+    Make Reservation
+  </a>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-secondary dark:bg-slate-950 text-white py-14">
+
+  <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+
+    <div>
+      <h2 class="text-3xl font-bold mb-4">LuxBite</h2>
+      <p>Luxury modern restaurant experience.</p>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Reservation</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-4">Opening Hours</h3>
+      <p>Mon - Sun</p>
+      <p>10:00 AM - 11:00 PM</p>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-4">Social Media</h3>
+
+      <div class="flex gap-4 text-2xl">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

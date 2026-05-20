@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Menu</title>
+
+      <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lightBg: '#FFF8F0',
+            primary: '#D97706',
+            secondary: '#92400E',
+            darkBg: '#0F172A',
+            darkPrimary: '#F59E0B',
+            darkSecondary: '#FBBF24'
+          }
+        }
+      }
+    }
+  </script>
+     <!-- Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-lightBg dark:bg-darkBg text-gray-800 dark:text-white transition-all duration-500">
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader"></div>
+</div>
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/30 dark:bg-slate-900/30 border-b border-white/20">
+  <nav class="container mx-auto flex justify-between items-center p-5">
+
+    <h1 class="text-3xl font-bold text-primary dark:text-darkPrimary">
+      LuxBite
+    </h1>
+
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li><a href="/index.html" class="hover:text-primary">Home</a></li>
+      <li><a href="menu.html" class="hover:text-primary">Menu</a></li>
+      <li><a href="about.html" class="hover:text-primary">About</a></li>
+      <li><a href="reservation.html" class="hover:text-primary">Reservation</a></li>
+      <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle"
+      class="bg-primary dark:bg-darkPrimary text-white px-4 py-2 rounded-full">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+  </nav>
+</head>
+<body>
+    <section class="container mx-auto py-24 px-6">
+
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold">Our Menu</h1>
+  </div>
+
+  <!-- Filter -->
+  <div class="flex flex-wrap justify-center gap-4 mb-12">
+
+    <button class="bg-primary text-white px-6 py-3 rounded-full">
+      All
+    </button>
+
+    <button class="bg-white dark:bg-slate-800 px-6 py-3 rounded-full">
+      Pizza
+    </button>
+
+    <button class="bg-white dark:bg-slate-800 px-6 py-3 rounded-full">
+      Burger
+    </button>
+
+    <button class="bg-white dark:bg-slate-800 px-6 py-3 rounded-full">
+      Steak
+    </button>
+
+  </div>
+
+</section>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
